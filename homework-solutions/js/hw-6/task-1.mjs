@@ -8,6 +8,14 @@
   Значение добавьте в массив 'forOf' 
 */
 const forOf = [];
+const initialArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let el of initialArr) {
+    if (el % 2 === 0) {
+      forOf.push(el **= 2);
+    } else {
+      forOf.push(el **= 3);
+    }
+  }
 
 /*
 2. Методы массивов
@@ -21,6 +29,12 @@ const forOf = [];
 */
 
 let result;
+const oneToFive = [1, 2, 3, 4, 5];
+oneToFive.push(6);
+oneToFive.unshift(0);
+oneToFive.splice(2, 1);
+oneToFive.pop();
+result = oneToFive;
 
 /*
 3. Деструктуризация массивов
@@ -30,6 +44,9 @@ let result;
   Пример: [1,2,3,4,5] => first === 1; second === 2, rest === [3,4,5]
 */
 
+const numbers = [3, 11, 32, 7, 20];
+const [first, second, ...rest] = numbers;
+
 /*
 4. Конкатенация массивов
   - Создайте массив с числами [1,2,3,4,5]
@@ -38,5 +55,9 @@ let result;
 
   Создайте переменную mergedArray, который будет хранить значения из массивов 1 и 2
 */
+
+const arrToConcat1 = [1, 2, 3, 4, 5];
+const arrToConcat2 = [6, 7, 8, 9, 10];
+const mergedArray = [...arrToConcat1, ...arrToConcat2];
 
 export { forOf, result, first, second, rest, mergedArray };
