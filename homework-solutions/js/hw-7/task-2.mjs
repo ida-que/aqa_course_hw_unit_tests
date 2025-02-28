@@ -5,11 +5,7 @@
 
 function isPalindrom(word) {
   if (word && typeof word === 'string') {
-    let reversedWord = word.split('').reverse().join('').toLowerCase();
-    if (word.toLowerCase() === reversedWord) {
-      return true;
-    } else {
-      return false;
+    return word.split('').reverse().join('').toLowerCase() === word.toLowerCase()
     }
   } else {
     return word === ''
