@@ -12,7 +12,7 @@ function isPalindrom(word) {
       return false;
     }
   } else {
-    return word === '' ? true : false;
+    return word === ''
   }
 }
 
