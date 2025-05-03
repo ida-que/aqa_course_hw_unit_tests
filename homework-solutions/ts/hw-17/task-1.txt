@@ -1,0 +1,37 @@
+From the HTML, find the following CSS/XPath selectors:
+
+1. CSS/XPath: element with id - 'submit'
+#submit
+//*[@id='submit']
+
+2. CSS/XPath: all elements with 'txt' class 
+.txt
+//*[@class='txt']
+
+3. XPath: first element with 'txt' class
+(//*[@class='txt'])[1]
+
+4. XPath: button with 'Remove comment' text
+//button[contains(text(),'Remove comment')]
+
+5. XPath: first element with 'one' class 
+(//*[contains(@class, 'one')])[1]
+
+6. CSS/XPath: element with 'multitag2' attribute and 'one' value
+[multitag2='on']
+//*[@multitag2='on']
+
+7. CSS/XPath: all children of the 'div' element with 'content' class
+Option 1 (all direct children)
+div.content > * 
+//div[contains(@class, 'content')]/*
+
+Option 2 (all children, grandchildren etc)
+div.content *
+//div[@class='content']//*
+
+8. CSS: all 'span' and 'button' elements with 'content' class
+span.content, button.content
+
+9. XPath: find body using the following selector as basis //*[@id='submit']
+//*[@id='submit']/ancestor::body
